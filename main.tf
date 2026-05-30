@@ -8,6 +8,11 @@ import {
   id = "/subscriptions/7d7e4c65-1bfb-4455-b143-d0d76737869b/resourceGroups/rg-devops-prod/providers/Microsoft.ContainerRegistry/registries/acrdevopsprod123"
 }
 
+import {
+  to = module.aks.azurerm_kubernetes_cluster.aks
+  id = "/subscriptions/7d7e4c65-1bfb-4455-b143-d0d76737869b/resourceGroups/rg-devops-prod/providers/Microsoft.ContainerService/managedClusters/aks-prod"
+}
+
 module "rg" {
   source = "./module/rg"
 
