@@ -10,15 +10,5 @@ enable_auto_scaling        = true
 enable_monitoring          = false
 log_analytics_workspace_id = null
 
-# Reduced node counts and switched to Standard_B2s (v1) to fit in quota
-node_pools = {
-
-  app1 = {
-    vm_size             = "Standard_B2s"
-    node_count          = 1
-    min_count           = 1
-    max_count           = 2
-    enable_auto_scaling = true
-  }
-
-}
+# Removing user node pools for now to ensure we stay under the VCPU quota
+node_pools = {}
