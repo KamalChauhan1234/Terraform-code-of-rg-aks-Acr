@@ -52,8 +52,12 @@ resource "azurerm_kubernetes_cluster_node_pool" "userpool" {
   tags = var.tags
 }
 
+/*
+# This role assignment requires the Service Principal to have 'User Access Administrator' or 'Owner' permissions.
+# Since permissions were handled manually, we are commenting this out to ensure pipeline success.
 resource "azurerm_role_assignment" "aks_acr" {
   principal_id         = azurerm_kubernetes_cluster.aks.kubelet_identity[0].object_id
   role_definition_name = "AcrPull"
   scope                = var.acr_id
 }
+*/
