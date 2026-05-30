@@ -3,6 +3,11 @@ import {
   id = "/subscriptions/7d7e4c65-1bfb-4455-b143-d0d76737869b/resourceGroups/rg-devops-prod"
 }
 
+import {
+  to = module.acr.azurerm_container_registry.acr
+  id = "/subscriptions/7d7e4c65-1bfb-4455-b143-d0d76737869b/resourceGroups/rg-devops-prod/providers/Microsoft.ContainerRegistry/registries/acrdevopsprod123"
+}
+
 module "rg" {
   source = "./module/rg"
 

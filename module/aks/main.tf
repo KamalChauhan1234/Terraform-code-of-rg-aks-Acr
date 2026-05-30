@@ -7,11 +7,11 @@ resource "azurerm_kubernetes_cluster" "aks" {
 
   default_node_pool {
     name                 = "system"
-    vm_size              = "Standard_B2s_v2"
-    node_count           = var.enable_auto_scaling ? null : 3
+    vm_size              = "Standard_B2s"
+    node_count           = var.enable_auto_scaling ? null : 1
     auto_scaling_enabled = var.enable_auto_scaling
     min_count            = var.enable_auto_scaling ? 1 : null
-    max_count            = var.enable_auto_scaling ? 5 : null
+    max_count            = var.enable_auto_scaling ? 3 : null
   }
 
   identity {
