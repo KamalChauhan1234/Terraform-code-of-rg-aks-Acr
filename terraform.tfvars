@@ -1,5 +1,6 @@
 resource_group_name = "rg-devops-prod"
 location            = "Central India"
+subscription_id     = "7d7e4c65-1bfb-4455-b143-d0d76737869b"
 
 acr_name = "acrdevopsprod123"
 
