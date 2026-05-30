@@ -1,3 +1,8 @@
+import {
+  to = module.rg.azurerm_resource_group.rg
+  id = "/subscriptions/7d7e4c65-1bfb-4455-b143-d0d76737869b/resourceGroups/rg-devops-prod"
+}
+
 module "rg" {
   source = "./module/rg"
 
